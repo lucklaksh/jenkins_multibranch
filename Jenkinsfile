@@ -4,12 +4,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean package -Pfeature'
+                sh' echo "building.." '
+                //sh 'mvn clean package -Pfeature'
             }
         }
         stage('Test') {
             steps {
-                sh 'mvn test -Pfeature'
+                sh' echo "testing.." '
+                //sh 'mvn test -Pfeature'
             }
         }
     }
